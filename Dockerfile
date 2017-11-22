@@ -3,4 +3,4 @@ RUN apt-get update -y && apt-get install git -y
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 COPY . /app
 WORKDIR /app
-RUN composer install --no-interaction && composer dump-autoload
+CMD composer install --no-interaction
